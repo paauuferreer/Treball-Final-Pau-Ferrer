@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Llistat d'Activitats</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <aside class="sidebar">
+        <h2>Menú</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html" class="active">Llistat d'Activitats</a></li>
+                <li><a href="crear-tasca.html">Crear Tasca</a></li>
+                <li><a href="categories.html">Gestió de Categories</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="contingut-principal">
+        <h1 class="titol-pagina">Llistat d'Activitats</h1>
+
+        <div class="grup-entrada">
+            <button class="boto boto-enviar" id="boto-nova-feina">Crear Nova Tasca</button>
+            <div class="grup-entrada">
+                <input type="text" id="nom-arxiu-json" placeholder="nom del arxiu">
+                <button class="boto" id="boto-importar">pujar</button>
+            </div>
+        </div>
+
+        <section class="seccio-llista-categories">
+            <h2 class="subtitol-seccio">Tasques pendents</h2>
+            <div id="feines-pendents" class="llista-tasques">
+            </div>
+        </section>
+
+        <section class="seccio-llista-categories">
+            <h2 class="subtitol-seccio">Tasques acabades</h2>
+            <div id="feines-enllestides" class="llista-tasques">
+            </div>
+        </section>
+
+        <section class="seccio-llista-categories">
+            <h2 class="subtitol-seccio">Activitat Mensual</h2>
+            <div class="grafic-activitat">
+                <canvas id="graficFeines"></canvas>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/main.js" type="module"></script>
+</body>
+</html>

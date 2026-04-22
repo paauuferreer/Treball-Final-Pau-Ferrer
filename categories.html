@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestionar Categories | Administrador</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <aside class="barra-lateral">
+        <h2>Menú</h2>
+        <nav>
+            <ul>
+                <li><a href="index.html">Llistat de Feines</a></li>
+                <li><a href="crear-tasca.html">Fer una Feina</a></li>
+                <li><a href="categories.html" class="actiu">Gestionar Categories</a></li>
+            </ul>
+        </nav>
+    </aside>
+
+    <main class="contingut-principal">
+        <h1 class="titol-pagina">Gestionar Categories</h1>
+
+        <div class="gestor-categories">
+            <div class="grup-entrada">
+                <input type="text" id="nom-categoria" placeholder="Nova categoria (ex: Esports...)">
+                <button class="boto" id="boto-afegir-cat">Afegir</button>
+            </div>
+        </div>
+
+        <section class="seccio-llista-categories">
+            <h2 class="subtitol-seccio">Categories d'ara</h2>
+            <div id="contenidor-categories" class="quadricula-categories">
+                <!-- S'omplirà amb JS -->
+            </div>
+        </section>
+    </main>
+
+    <script src="js/categories.js" type="module"></script>
+</body>
+</html>
