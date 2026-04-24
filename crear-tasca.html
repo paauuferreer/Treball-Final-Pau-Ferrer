@@ -3,47 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fer una Feina | Administrador</title>
+    <title>Crear Tasca</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="barra-lateral">
+    <aside class="sidebar">
         <h2>Menú</h2>
         <nav>
             <ul>
-                <li><a href="index.html">Llistat de Feines</a></li>
-                <li><a href="crear-tasca.html" class="actiu">Fer una Feina</a></li>
-                <li><a href="categories.html">Gestionar Categories</a></li>
+                <li><a href="index.html">Llistat d'Activitats</a></li>
+                <li><a href="crear-tasca.html" class="active">Crear Tasca</a></li>
+                <li><a href="categories.html">Gestió de Categories</a></li>
             </ul>
         </nav>
     </aside>
 
     <main class="contingut-principal">
-        <h1 class="titol-pagina">Fer una Feina Nova</h1>
+        <h1 class="titol-pagina">Crear Nova Tasca</h1>
 
         <div class="contenidor-formulari">
             <form id="formulari-feina" novalidate>
                 <div class="grup-formulari">
-                    <label for="titol">Títol</label>
+                    <label for="titol">Títol:</label>
                     <input type="text" id="titol" required>
                     <span id="error-titol" class="text-error">És obligatori</span>
                 </div>
                 <div class="grup-formulari">
-                    <label for="descripcio">Descripció</label>
+                    <label for="descripcio">Descripció:</label>
                     <textarea id="descripcio"></textarea>
                 </div>
                 <div class="grup-formulari">
-                    <label for="data">Data</label>
+                    <label for="data">Data:</label>
                     <input type="date" id="data" required>
                     <span id="error-data" class="text-error">És obligatori</span>
                 </div>
                 <div class="fila-formulari">
                     <div class="grup-formulari">
-                        <label for="categoria">Categoria</label>
+                        <label for="categoria">Categoria:</label>
                         <select id="categoria"></select>
                     </div>
                     <div class="grup-formulari">
-                        <label for="prioritat">Prioritat</label>
+                        <label for="prioritat">Prioritat:</label>
                         <select id="prioritat">
                             <option>Baixa</option>
                             <option selected>Mitjana</option>
@@ -51,7 +51,7 @@
                         </select>
                     </div>
                 </div>
-                <button type="submit" class="boto boto-enviar">Guardar feina</button>
+                <button type="submit" class="boto boto-enviar">Crear Tasca</button>
             </form>
         </div>
     </main>

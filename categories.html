@@ -3,37 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gestionar Categories | Administrador</title>
+    <title>Gestionar Categories</title>
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <aside class="barra-lateral">
+    <aside class="sidebar">
         <h2>Menú</h2>
         <nav>
             <ul>
-                <li><a href="index.html">Llistat de Feines</a></li>
-                <li><a href="crear-tasca.html">Fer una Feina</a></li>
-                <li><a href="categories.html" class="actiu">Gestionar Categories</a></li>
+                <li><a href="index.html">Llistat d'Activitats</a></li>
+                <li><a href="crear-tasca.html">Crear Tasca</a></li>
+                <li><a href="categories.html" class="active">Gestió de Categories</a></li>
             </ul>
         </nav>
     </aside>
 
     <main class="contingut-principal">
-        <h1 class="titol-pagina">Gestionar Categories</h1>
+        <h1 class="titol-pagina">Gestió de Categories</h1>
 
-        <div class="gestor-categories">
-            <div class="grup-entrada">
-                <input type="text" id="nom-categoria" placeholder="Nova categoria (ex: Esports...)">
-                <button class="boto" id="boto-afegir-cat">Afegir</button>
+        <div class="contenidor-formulari">
+            <div class="grup-formulari">
+                <label for="nom-categoria">Nova Categoria:</label>
+                <input type="text" id="nom-categoria">
             </div>
+            <div class="grup-formulari-color">
+                <label for="color-categoria">Color de la Categoria:</label>
+                <input type="color" id="color-categoria" value="#ff0000">
+            </div>
+            <button class="boto boto-enviar" id="boto-afegir-cat">Afegir Categoria</button>
         </div>
 
-        <section class="seccio-llista-categories">
-            <h2 class="subtitol-seccio">Categories d'ara</h2>
-            <div id="contenidor-categories" class="quadricula-categories">
-                <!-- S'omplirà amb JS -->
-            </div>
-        </section>
+        <div id="llista-categories" class="llista-items-categories">
+            <!-- Es carregarà per JS -->
+        </div>
     </main>
 
     <script src="js/categories.js" type="module"></script>
