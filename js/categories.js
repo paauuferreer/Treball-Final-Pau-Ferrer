@@ -29,22 +29,21 @@ function pintarCategories() {
                 <div class="cercle-color" style="background-color: ${cat.color}"></div>
                 <span>${cat.nom}</span>
             </div>
-            <button class="boto-eliminar" data-id="${index}">Eliminar</button>
+            <div class="tasca-accions">
+                <svg class="icona-svg-tasca" onclick="eliminarCat(${index})" viewBox="0 0 24 24">
+                    <path d="M19,4H15.5L14.5,3H9.5L8.5,4H5V6H19M6,19A2,2 0 0,0 8,21H16A2,2 0 0,0 18,19V7H6V19Z" />
+                </svg>
+            </div>
         `;
 
         llistaCat.appendChild(item);
     });
 
-    const botonsEliminar = document.querySelectorAll('.boto-eliminar');
-    botonsEliminar.forEach(boto => {
-        boto.onclick = function() {
-            const index = this.getAttribute('data-id');
-            categories.splice(index, 1);
-            guardarCategories();
-            pintarCategories();
-        };
-    });
-}
+window.eliminarCat = function(index) {
+    categories.splice(index, 1);
+    guardarCategories();
+    pintarCategories();
+};
 
 botoAfegir.onclick = function() {
     const nom = nomCatInput.value.trim();
