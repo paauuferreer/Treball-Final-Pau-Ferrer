@@ -33,3 +33,16 @@ export function eliminarTascaStorage(id) {
     saveTasques(filtrades);
     return filtrades;
 }
+
+export async function importarTasques(nomArxiu) {
+    try {
+        const resposta = await fetch(`./dades/${nomArxiu}`);
+        if (resposta.ok) {
+            const tasquesNoves = await resposta.json();
+            return afegirTasques(tasquesNoves);
+        }
+    } catch (error) {
+        console.error("Error fent el fetch:", error);
+    }
+    return getTasques();
+}

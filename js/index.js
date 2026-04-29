@@ -1,15 +1,12 @@
-import { carregarGrafic, carregarDadesAPI } from './grafics.js';
+import { carregarGrafic } from './grafics.js';
 import { crearTargeta } from './models.js';
-import { getTasques, saveTasques, afegirTasques, updateTasca, eliminarTascaStorage } from './storage.js';
+import { getTasques, afegirTasques, updateTasca, eliminarTascaStorage, importarTasques } from './storage.js';
 
 let tasquesActuals = [];
 
 async function importarDadesJSON(nomArxiu) {
-    const tasquesNoves = await carregarDadesAPI(nomArxiu);
-    if (tasquesNoves && tasquesNoves.length > 0) {
-        tasquesActuals = afegirTasques(tasquesNoves);
-        pintarTot();
-    }
+    tasquesActuals = await importarTasques(nomArxiu);
+    pintarTot();
 }
 
 function inicialitza() {
