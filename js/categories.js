@@ -38,6 +38,7 @@ function pintarCategories() {
 
         llistaCat.appendChild(item);
     });
+}
 
 window.eliminarCat = function(index) {
     categories.splice(index, 1);
